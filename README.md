@@ -16,7 +16,8 @@ To develop a simple webserver to serve html programming pages.
 
 ## PROGRAM:
 
-### SERVER SIDE
+### CILENTSIDE
+```
 python
 import socket
 HOST = "127.0.0.1"  # The server's hostname or IP address
@@ -26,11 +27,12 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.sendall(b"Hello, world")
     data = s.recv(1024)
 print(f"Received {data!r}")
+```
 
 
-
-### CLIENT SIDE 
+### SERVER SIDE 
 python
+```
 import socket
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
@@ -58,7 +60,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             except Exception as e:
                 print(f"Error receiving/sending data: {e}")
                 exit()
-
+```
 
 ## OUTPUT:
 
